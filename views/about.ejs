@@ -1,0 +1,539 @@
+<!-- Latest compiled and bootstrap minified CSS -->
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+<!-- Custom Stylesheets -->
+<link rel="stylesheet" href="../assets/css/about.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+
+<!-- Popper js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+
+<!-- Bootstrap Js -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+<!-- Editor -->
+<script type="text/javascript" src="../assets/js/ckeditor.js"></script>
+</head>
+
+<title><%= ocMessages.pages.site.title.translation_7 %></title>
+<% include partials/navbar.ejs %>
+<div class="container founders">
+    <h1 class="display-4 text-center"><%= ocMessages.pages.about.translation_0 %></h1> <!-- Meet the foundes -->
+    <hr id="page-break">
+    <div class="row">
+        <div class="col-lg-6 pic container-fluid mt-4">
+            <img class="img-fluid float-right" src="assets/images/byron2.png" alt="Byron's pic" id="byron">
+            <div class="text-center">
+                <h3 class=""><%= ocMessages.pages.about.translation_1 %></h3> <!-- Byron Buyck -->
+                <p class="text-white"><%= ocMessages.pages.about.translation_2 %></p> <!-- Lead Software Developer -->
+            </div>
+            <hr>
+            <ul>
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_3 %></li> <!-- Java -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_4 %></li> <!-- JavaScript -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_5 %></li> <!-- React -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_11 %></li> <!-- Adobe CC -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
+            </ul>
+        </div>
+        <!--added img-fluid class to all images-->
+        <div class="col-lg-6 pic container-fluid mt-4">
+            <img class="img-fluid float-right" src="assets/images/pcra.png" alt="Perry's pic" id="perry">
+            <div class="text-center">
+                <h3 class="text-center"><%= ocMessages.pages.about.translation_6 %></h3> <!-- Perry Craft -->
+                <p class="text-white"><%= ocMessages.pages.about.translation_7 %></p> <!-- Lead Web Developer -->
+                <hr>
+            </div>
+            <ul>
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_8 %></li> <!-- Mongo DB -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_9 %></li> <!-- AngularJs -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_10 %></li> <!-- Angular -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_4 %></li> <!-- JavaScript -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
+            </ul>
+        </div>
+        <div class="col-lg-6 pic container-fluid mt-4">
+            <img class="img-fluid float-right" src="assets/images/floyd2.png" alt="Floyd's pic" id="floyd">
+            <div class="text-center">
+                <h3><%= ocMessages.pages.about.translation_13 %></h3> <!-- Floyd Holt -->
+                <p class="text-white"><%= ocMessages.pages.about.translation_14 %></p>
+                <!-- Project Manager & Web Developer -->
+                <hr>
+            </div>
+            <ul>
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_4 %></li> <!-- Javascript -->
+            </ul>
+        </div>
+        <div class="col-lg-6 pic container-fluid mt-4">
+            <img class="img-fluid float-right" src="assets/images/phil.jpg" alt="Phil's pic" id="phil">
+            <div class="text-center">
+                <h3><%= ocMessages.pages.about.translation_15 %></h3> <!-- Philip Simmons -->
+                <p class="text-white"><%= ocMessages.pages.about.translation_16 %></p> <!-- Creative Director -->
+                <hr>
+            </div>
+            <ul>
+            <!--list was missing ending carrot on last element here-->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_11 %></li> <!-- Adobe CC -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_4 %></li> <!-- Javascript -->
+            </ul>
+        </div>
+    </div>
+    <hr id="page-break">
+    <div class="row header">
+        <h1><%= ocMessages.pages.about.translation_17 %></h1> <!-- We dream, explore,... -->
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3><%= ocMessages.pages.about.translation_18 %></h3> <!-- How we work -->
+            <p><%= ocMessages.pages.about.translation_19 %></p> <!-- We'll work within your... -->
+        </div>
+        <div class="col-md-6">
+            <h3><%= ocMessages.pages.about.translation_20 %></h3> <!-- What we offer -->
+            <p><%= ocMessages.pages.about.translation_21 %></p> <!-- The days of your... -->
+        </div>
+    </div>
+</div>
+<% include partials/footer.ejs %>
+<div class="modal fade mt-5" id="perryModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/pcra.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.perry.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.perry.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade mt-5" id="byronModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/byron2.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.byron.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.byron.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade mt-5" id="philModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/phil.jpg" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.phil.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.phil.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade mt-5" id="floydModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/floyd2.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.floyd.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.floyd.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<!--There was an extra footer partial here-->
+<div class="modal fade mt-5" id="perryModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/pcra.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.perry.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.perry.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade mt-5" id="byronModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/byron2.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.byron.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.byron.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade mt-5" id="philModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/phil.jpg" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.phil.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.phil.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Floyd Modal -->
+<div class="modal fade mt-5" id="floydModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/floyd2.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.floyd.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.floyd.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Floyd modal -->
+

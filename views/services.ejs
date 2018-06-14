@@ -1,0 +1,620 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- Latest compiled and bootstrap minified CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/services.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+
+    <!-- Popper js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap Js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+
+    <!-- Editor -->
+    <script type="text/javascript" src="../assets/js/ckeditor.js"></script>
+</head>
+
+<title><%= ocMessages.pages.site.title.translation_1 %></title>
+
+<% include partials/navbar.ejs %>
+
+
+<!-- Services Section -->
+<div class="services px-3 py-3 pt-md-5 pb-md-4 mt-3 mx-auto text-center">
+    <h1 class="display-4 mt-4"><%= ocMessages.pages.servicePage.translation_0 %></h1>
+    <p class="lead"><%= ocMessages.pages.servicePage.translation_1 %></p>
+</div>
+<section class="services">
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><%= ocMessages.pages.servicePage.translation_2 %></h4>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title pricing-card-title"><%= ocMessages.pages.servicePage.translation_3 %>
+                        <br>
+                        <small class="text-muted"><%= ocMessages.pages.servicePage.translation_4 %></small>
+                    </h3>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <% for(var i = 0; i < cardBodyOne.length; i++){ %>
+                        <li><%= cardBodyOne[i] %></li>
+                        <% } %>
+                    </ul>
+                    <button href="#" type="button" class="btn btn-lg btn-block text-truncate"
+                            data-toggle="modal"
+                            data-target="#designModal"><%= ocMessages.buttons.translation_2 %></button>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><%= ocMessages.pages.servicePage.translation_10 %></h4>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title pricing-card-title"><%= ocMessages.pages.servicePage.translation_17 %>
+                        <small class="text-muted"><%= ocMessages.pages.servicePage.translation_18 %></small>
+                    </h3>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <% for(var i = 0; i < cardBodyTwo.length; i++){ %>
+                        <li><%= cardBodyTwo[i] %></li>
+                        <% } %>
+                    </ul>
+                    <button href="#" type="button" class="btn btn-lg btn-block text-truncate"
+                            data-toggle="modal"
+                            data-target="#siteModal"><%= ocMessages.buttons.translation_2 %></button>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><%= ocMessages.pages.servicePage.translation_11 %></h4>
+                </div>
+                <div class="card-body bg-ocDkGrey">
+                    <h4 class="card-title pricing-card-title"><%= ocMessages.pages.servicePage.translation_12 %></h4>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <% for(var i = 0; i < cardBodyThree.length; i++){ %>
+                        <li><%= cardBodyThree[i] %></li>
+                        <% } %>
+                    </ul>
+                    <button href="#" type="button" class="btn btn-lg btn-block text-truncate"
+                            data-toggle="modal"
+                            data-target="#maintenanceModal"><%= ocMessages.buttons.translation_2 %></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<% include partials/footer.ejs %>
+
+<!-- Design Modal -->
+<div class="modal fade" id="designModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title"><%= ocMessages.pages.servicePage.modals.design.translation_0 %></h5>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <p class="card-header mb-2 text-center bg-secondary text-white justify-content-sm-center"><%= ocMessages.pages.servicePage.modals.design.translation_1 %></p>
+                    <hr>
+                    <div id="accordion" role="tablist" class="row justify-content-between">
+                        <div class="col-lg-4">
+                            <div>
+                                <button class="btn btn-outline-primary btn-block port-item mb-sm-2" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#scratch"><%= ocMessages.pages.servicePage.modals.design.translation_2 %>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div>
+                                <button class="btn btn-outline-primary btn-block port-item mb-sm-2" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#idea"><%= ocMessages.pages.servicePage.modals.design.translation_3 %>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <button class="btn btn-outline-primary btn-block port-item" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#branding"><%= ocMessages.pages.servicePage.modals.design.translation_4 %>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Idea dropdown -->
+                    <div class="row">
+                        <div id="idea" class="collapse col-lg-12 pt-3">
+                            <div class="bg-success text-white text-center py-2">
+                                <p><%= ocMessages.pages.servicePage.modals.design.translation_5 %></p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_6 %></div>
+                                <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_7 %></div>
+                                <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_8 %></div>
+                            </div>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                                     style="width: 50%">50%
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <p class="text-center"> <%= ocMessages.pages.servicePage.modals.design.translation_9 %> </p>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <p class="mb-0"><%= ocMessages.pages.servicePage.modals.design.translation_10 %></p>
+                                                    <p class="text-muted text-center"><%= ocMessages.pages.servicePage.modals.design.translation_11 %></p>
+                                                </div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_12 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_13 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_14 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_15 %>
+                                                        <i class="fas fa-info info" data-toggle="tooltip"
+                                                           data-placement="right"
+                                                           title="<%= ocMessages.pages.servicePage.helpers.translation_0 %>"></i>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                        <%= ocMessages.pages.servicePage.modals.design.translation_16 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                        <%= ocMessages.pages.servicePage.modals.design.translation_16 %>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <p class="mb-0"><%= ocMessages.pages.servicePage.modals.design.translation_17 %></p>
+                                                    <p class="text-muted text-center"><%= ocMessages.pages.servicePage.modals.design.translation_18 %></p>
+                                                </div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i><%= ocMessages.pages.servicePage.modals.design.translation_19 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_20 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_21 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_22 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_23 %>
+                                                        <i
+                                                                class="fas fa-info info" data-toggle="tooltip"
+                                                                data-placement="right"
+                                                                title="<%= ocMessages.pages.servicePage.helpers.translation_1 %>"></i>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_24 %>
+                                                        <i class="fas fa-info info" data-toggle="tooltip"
+                                                           data-placement="right"
+                                                           title="<%= ocMessages.pages.servicePage.helpers.translation_0 %>"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary btn-block" href="/contact">
+                                    <%= ocMessages.buttons.translation_3 %>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of idea dropdown -->
+
+
+                    <!-- Scratch dropdown-->
+                    <div class="row">
+                        <div id="scratch" class="collapse col-lg-12 pt-3">
+                            <div class="card card-body bg-warning text-white py-2">
+                                <p class="text-center"> <%= ocMessages.pages.servicePage.modals.design.translation_25 %></p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_6 %></div>
+                                <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_7 %></div>
+                                <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_8 %></div>
+                            </div>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                                     style="width: 25%"><%= ocMessages.pages.servicePage.modals.design.translation_26 %>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <p class="text-center"> <%= ocMessages.pages.servicePage.modals.design.translation_27 %> </p>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <p class="mb-0"><%= ocMessages.pages.servicePage.modals.design.translation_28 %></p>
+                                                    <p class="text-muted text-center"><%= ocMessages.pages.servicePage.modals.design.translation_11 %></p>
+                                                </div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_30 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_31 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_32 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_33 %>
+                                                        <i class="fas fa-info info" data-toggle="tooltip"
+                                                           data-placement="right"
+                                                           title="<%= ocMessages.pages.servicePage.helpers.translation_0 %>"></i>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                        <%= ocMessages.pages.servicePage.modals.design.translation_16 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                        <%= ocMessages.pages.servicePage.modals.design.translation_16 %>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <p class="mb-0"> <%= ocMessages.pages.servicePage.modals.design.translation_34 %></p>
+                                                    <p class="text-muted text-center"><%= ocMessages.pages.servicePage.modals.design.translation_18 %></p>
+                                                </div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_35 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_36 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_37 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_38 %>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_39 %>
+                                                        <i class="fas fa-info info" data-toggle="tooltip"
+                                                           data-placement="right"
+                                                           title="<%= ocMessages.pages.servicePage.helpers.translation_1 %>"></i>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i>
+                                                        <%= ocMessages.pages.servicePage.modals.design.translation_15 %>
+                                                        <i class="fas fa-info info" data-toggle="tooltip"
+                                                           data-placement="right"
+                                                           title="<%= ocMessages.pages.servicePage.helpers.translation_0 %>"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary btn-block" href="/contact">
+                                <%= ocMessages.buttons.translation_3 %>
+                            </button>
+                        </div>
+                        <!-- End of scratch dropdown -->
+
+                        <!-- Branding dropdown-->
+                        <div class="row">
+                            <div id="branding" class="collapse col-lg-12 pt-3">
+                                <div class="card card-body bg-warning text-white py-2">
+                                    <p class="text-center"><%= ocMessages.pages.servicePage.modals.design40 %></p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_6 %></div>
+                                    <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_7 %></div>
+                                    <div class="mt-1"><%= ocMessages.pages.servicePage.modals.design.translation_8 %></div>
+                                </div>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-light progress-bar-striped progress-bar-animated text-dark"
+                                         style="width: 10%"><%= ocMessages.pages.servicePage.modals.design.translation_47 %>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <p class="text-center"> <%= ocMessages.pages.servicePage.modals.design.translation_1 %> </p>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <p class="mb-0"><%= ocMessages.pages.servicePage.modals.design.translation_42 %></p>
+                                                        <p class="text-muted text-center"><%= ocMessages.pages.servicePage.modals.design.translation_11 %></p>
+                                                    </div>
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_43 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_44 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_45 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_46 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i>
+                                                            <%= ocMessages.pages.servicePage.modals.design.translation_24 %>
+                                                            <i class="fas fa-info info" data-toggle="tooltip"
+                                                               data-placement="right"
+                                                               title="<%= ocMessages.pages.servicePage.helpers.translation_0 %>"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <p class="mb-0"><%= ocMessages.pages.servicePage.modals.design.translation_48 %></p>
+                                                        <p class="text-muted text-center"><%= ocMessages.pages.servicePage.modals.design.translation_1 %></p>
+                                                    </div>
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i><%= ocMessages.pages.servicePage.modals.design.translation_49 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_50 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_51 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_52 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_53 %>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i>
+                                                            <%= ocMessages.pages.servicePage.modals.design.translation_15 %>
+                                                            <i class="fas fa-info info" data-toggle="tooltip"
+                                                               data-placement="right"
+                                                               title="<%= ocMessages.pages.servicePage.helpers.translation_0 %>"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-primary btn-block" href="/contact">
+                                    <%= ocMessages.buttons.translation_3 %>
+                                </button>
+                            </div>
+                            <!-- End of branding dropdown -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Site modal -->
+<div class="modal fade" id="siteModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title"><%= ocMessages.pages.servicePage.modals.website.translation_0 %></h5>
+                <!-- It's the digital age... -->
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <p class="card-header mb-2 text-center bg-secondary text-white justify-content-sm-center"><%= ocMessages.pages.servicePage.modals.website.translation_1 %></p>
+                    <hr>
+                    <!-- We have many packages -->
+                    <div id="accordion">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <button class="btn btn-success btn-block port-item mb-sm-2" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#silver"><%= ocMessages.pages.servicePage.modals.website.translation_2 %>
+                                    <!-- Silver package starting -->
+                                </button>
+                            </div>
+                            <div class="col-lg-4">
+                                <button class="btn btn-success btn-block port-item mb-sm-2" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#gold"><%= ocMessages.pages.servicePage.modals.website.translation_3 %>
+                                    <!-- Gold package starting -->
+                                </button>
+                            </div>
+                            <div class="col-lg-4">
+                                <button class="btn btn-success btn-block port-item mb-sm-2" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#platinum"><%= ocMessages.pages.servicePage.modals.website.translation_4 %>
+                                    <!-- Platinum package starting at -->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver Package dropdown -->
+                <div class="row">
+                    <div id="silver" class="collapse col-lg-12 pt-3">
+                        <div class="bg-success text-white text-center py-2">
+                            <p><%= ocMessages.pages.servicePage.modals.website.translation_5 %></p> <!-- Silver Package includes -->
+                        </div>
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <p class="text-center"> <%= ocMessages.pages.servicePage.modals.design.translation_9 %> </p>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <p class="mb-0"><%= ocMessages.pages.servicePage.modals.design.translation_10 %></p>
+                                                <p class="text-muted text-center"><%= ocMessages.pages.servicePage.modals.design.translation_11 %></p>
+                                            </div>
+                                            <ul class="list-group">
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_12 %>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_13 %>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_14 %>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_15 %>
+                                                    <i class="fas fa-info info" data-toggle="tooltip"
+                                                       data-placement="right"
+                                                       title="<%= ocMessages.pages.servicePage.helpers.translation_0 %>"></i>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                    <%= ocMessages.pages.servicePage.modals.design.translation_16 %>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                    <%= ocMessages.pages.servicePage.modals.design.translation_16 %>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <p class="mb-0"><%= ocMessages.pages.servicePage.modals.design.translation_17 %></p>
+                                                <p class="text-muted text-center"><%= ocMessages.pages.servicePage.modals.design.translation_18 %></p>
+                                            </div>
+                                            <ul class="list-group">
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i><%= ocMessages.pages.servicePage.modals.design.translation_19 %>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_20 %>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_21 %>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_22 %>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_23 %>
+                                                    <i
+                                                            class="fas fa-info info" data-toggle="tooltip"
+                                                            data-placement="right"
+                                                            title="<%= ocMessages.pages.servicePage.helpers.translation_1 %>"></i>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action list-group-item-success">
+                                                    <i class="fas fa-check"></i> <%= ocMessages.pages.servicePage.modals.design.translation_24 %>
+                                                    <i class="fas fa-info info" data-toggle="tooltip"
+                                                       data-placement="right"
+                                                       title="<%= ocMessages.pages.servicePage.helpers.translation_0 %>"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-primary btn-block" href="/contact">
+                                <%= ocMessages.buttons.translation_3 %>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of silver package drop-down -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Maintenance modal-->
+<div class="modal fade" id="maintenanceModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary text-white">
+                <h5 class="modal-title"><%= ocMessages.pages.servicePage.translation_12 %></h5>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <p class="lead"><%= ocMessages.pages.servicePage.translation_12 %></p>
+                    <p>Delete this and fill out this modal</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal"><%= ocMessages.buttons.translation_0 %></button>
+                <button class="btn btn-success" data-dismiss="modal"><%= ocMessages.buttons.translation_1 %></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of maintenance modal -->
+
+
+<script>
+    $('.port-item').click(function () {
+        $('.collapse').collapse('hide');
+    })
+</script>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
